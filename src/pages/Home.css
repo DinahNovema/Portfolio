@@ -1,0 +1,76 @@
+/*General and Mobile styles*/
+.home {
+  height: auto;
+  width: 375px;
+  font-size: 1.4em;
+}
+.name {
+  color: #d9a407;
+  margin: 100px 0 0 50px;
+  font-size: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end);
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.description {
+  color: rgb(71, 71, 71);
+  margin: 30px 0 0 60px;
+  font-size: 25px;
+}
+.profile-picture {
+  margin: 60px 0 180px 50px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  animation-name: img-ani;
+  animation-delay: initial;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+@keyframes img-ani {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*dark mode*/
+.home .name.dark {
+  color: #fff587;
+}
+.home .description.dark {
+  color: rgb(218, 214, 214);
+}
+
+/*Desktop styles*/
+@media only screen and (min-width: 480px) {
+  .home {
+    height: auto;
+    width: auto;
+    font-size: 1.4em;
+  }
+  .name {
+    margin: 250px 0 0 230px;
+    font-size: 50px;
+  }
+  .description {
+    color: rgb(71, 71, 71);
+    margin-left: 150px;
+  }
+  .profile-picture {
+    margin: -300px 0 0 1000px;
+    width: 450px;
+    height: 450px;
+  }
+}

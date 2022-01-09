@@ -1,0 +1,112 @@
+/*General and Mobile styles*/
+.title-about {
+  color: rgb(71, 71, 71);
+  text-align: center;
+  margin-top: 30px;
+}
+.about-me {
+  color: rgb(71, 71, 71);
+  margin: 50px 0 0 10px;
+  padding: 10px;
+  font-size: 17px;
+}
+.skills,
+.find-me,
+.linkedin,
+.github-about,
+.icon {
+  animation-name: skills;
+  animation-delay: initial;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+.skills {
+  color: rgb(71, 71, 71);
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+@keyframes skills {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.find-me {
+  text-align: center;
+  color: rgb(71, 71, 71);
+  font-size: 20px;
+  margin-top: 20px;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin: 30px 10px 180px 0;
+}
+.linkedin,
+.github-about {
+  width: 40px;
+  height: 40px;
+  color: black;
+  text-decoration: none;
+  margin: -20px 0 0 10px;
+}
+.icons-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+}
+
+/*Dark mode*/
+.about-me.dark,
+.title-about.dark,
+.skills.dark,
+.find-me.dark,
+.linkedin.dark,
+.github-about.dark,
+.icon.dark {
+  color: rgb(245, 243, 243);
+}
+
+/*Desktop styles*/
+@media only screen and (min-width: 480px) {
+  .title-about {
+    margin-top: 100px;
+  }
+  .about-me {
+    margin: 80px;
+    font-size: 1.5em;
+  }
+  .skills {
+    font-size: 1.5em;
+    text-align: left;
+    margin-left: 90px;
+  }
+  .find-me {
+    text-align: right;
+    margin: -120px 180px 0 0;
+  }
+  .social-media {
+    display: flex;
+    justify-content: right;
+    margin: 30px 160px 0 0;
+  }
+  .linkedin,
+  .github-about {
+    margin-right: 20px;
+  }
+  .icons-skills {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 180px;
+  }
+}

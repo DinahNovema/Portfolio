@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "image": "images/saas.jpg",
+      "title": "SaaS-Application",
+      "description": "First project at ITC (Israel Tech Challenge) following the Figma design using only HTML & CSS with a responsive design.",
+      "languages": "HTML and CSS",
+      "github": "https://github.com/DinahNovema/SaaS-Application.git",
+      "website": "https://saas-application.netlify.app/"
+    },
+    {
+      "id": "2",
+      "image": "images/stocks.jpg",
+      "title": "Stock Exchange: Nasdaq",
+      "description": "First JavaScript project at ITC. This project is based on Financial Modeling Prep (https://site.financialmodelingprep.com/) and API endpoints was used.",
+      "technologies": "HTML, CSS and JavaScript",
+      "github": "https://github.com/DinahNovema/Stock-Exchange---Nasdaq.git",
+      "website": "https://stock-exchange-nasdaq.netlify.app/"
+    },
+    {
+      "id": "3",
+      "image": "images/notes.jpg",
+      "title": "Notes App",
+      "description": "First React JS project at ITC - created a notes app with the functionalities of: adding, changing and deleting notes.",
+      "technologies": "React",
+      "github": "https://github.com/DinahNovema/Notes-App.git",
+      "website": "https://notes-app-itc.netlify.app/"
+    },
+    {
+      "id": "4",
+      "image": "images/portfolio.jpg",
+      "title": "Portfolio",
+      "description": "This portfolio itself created with React JS with a responsive design.",
+      "technologies": "React",
+      "github": "https://github.com/DinahNovema/Notes-App.git",
+      "website": "https://notes-app-itc.netlify.app/"
+    }
+  ]
+}

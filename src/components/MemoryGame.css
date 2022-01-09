@@ -1,0 +1,63 @@
+/*General and Mobile styles*/
+.card-grid {
+  width: 350px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.button-game {
+  width: 150px;
+  height: 40px;
+  font-family: "poppins";
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 4px;
+  border: none;
+  margin: 150px 0 10px 110px;
+  background-color: #d9a407;
+  color: white;
+  text-align: center;
+}
+.button-game:hover {
+  cursor: pointer;
+  background-color: #f29544;
+  color: rgb(71, 71, 71);
+}
+.button-game.dark:hover {
+  color: white;
+}
+.turns {
+  color: rgb(71, 71, 71);
+  font-weight: bold;
+  text-align: center;
+}
+.message {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 300px;
+}
+/*Dark mode*/
+.turns.dark,
+.message.dark {
+  color: white;
+}
+
+/*Desktop styles*/
+@media only screen and (min-width: 480px) {
+  .card-grid {
+    width: 800px;
+    grid-gap: 20px;
+  }
+  .button-game {
+    width: 250px;
+    height: 45px;
+    font-size: 2em;
+    margin: 30px 0 30px 650px;
+  }
+  .message {
+    font-size: 3em;
+    margin-top: 300px;
+  }
+}

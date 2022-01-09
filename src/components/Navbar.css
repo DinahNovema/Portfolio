@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  margin: 10px 0 0 20px;
+  gap: 10px;
+  align-items: right;
+  font-size: 1.4em;
+}
+.navbar a {
+  color: rgb(71, 71, 71);
+  padding: 4px 10px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  font-weight: bold;
+}
+.navbar a.active {
+  color: #d9a407;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*dark mode*/
+.navbar.dark a {
+  color: rgb(221, 218, 220);
+}
+.navbar a.active {
+  color: #d9a407;
+}
