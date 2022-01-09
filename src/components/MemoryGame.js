@@ -86,7 +86,7 @@ export default function MemoryGame() {
   };
   setTimeout(() => {
     setShowMessage(false);
-  }, 15000);
+  }, 11000);
 
   setTimeout(() => {
     setShowProjectList(true);
