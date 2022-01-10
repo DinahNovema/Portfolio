@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { projectFirestore } from "../firebase/config";
 
 //styles
 import "./Projects.css";
@@ -7,16 +8,38 @@ import "./Projects.css";
 import MemoryGame from "../components/MemoryGame";
 import ProjectsList from "../components/ProjectsList";
 import { useTheme } from "../hooks/useTheme";
-import { useFetch } from "../hooks/useFetch";
 
 export default function Projects() {
-  const { data: projects, isPending } = useFetch(
-    "http://localhost:3000/projects"
-  );
-
+  const [projects, setProjects] = useState(null);
+  const [isPending, setIsPending] = useState(false);
+  const [error, setError] = useState(false);
   const { mode } = useTheme();
   const [showGame, setShowGame] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
+
+  useEffect(() => {
+    setIsPending(true);
+    const unsub = projectFirestore.collection("projects").onSnapshot(
+      (snapshot) => {
+        if (snapshot.empty) {
+          setError("No projects to load");
+          setIsPending(false);
+        } else {
+          let results = [];
+          snapshot.docs.forEach((doc) => {
+            results.push({ id: doc.id, ...doc.data() });
+          });
+          setProjects(results);
+          setIsPending(false);
+        }
+      },
+      (err) => {
+        setError(err.message);
+        setIsPending(false);
+      }
+    );
+    return () => unsub();
+  }, []);
 
   const handleClickYes = (button) => {
     if (button) {

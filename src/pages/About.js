@@ -1,10 +1,12 @@
 import { useTheme } from "../hooks/useTheme";
 import { FaLinkedinIn, FaReact } from "react-icons/fa";
-import "./About.css";
 import { BsGithub } from "react-icons/bs";
 import { AiFillHtml5 } from "react-icons/ai";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaCss3Alt } from "react-icons/fa";
+
+//styles
+import "./About.css";
 
 export default function About() {
   const { mode } = useTheme();

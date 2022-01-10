@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-// import ProjectsList from "../components/ProjectsList";
 import SingleCard from "../components/SingleCard";
-import { useFetch } from "../hooks/useFetch";
+import ProjectsList from "./ProjectsList";
+import { projectFirestore } from "../firebase/config";
 
 //images
 import notes from "../images/notes.jpg";
@@ -12,7 +12,6 @@ import portfolio from "../images/portfolio.jpg";
 //styles
 import "./MemoryGame.css";
 import { useTheme } from "../hooks/useTheme";
-import ProjectsList from "./ProjectsList";
 
 const cardImages = [
   { src: notes, matched: false },
@@ -22,10 +21,6 @@ const cardImages = [
 ];
 
 export default function MemoryGame() {
-  const { data: projects, isPending } = useFetch(
-    "http://localhost:3000/projects"
-  );
-
   const { mode } = useTheme();
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
@@ -35,6 +30,34 @@ export default function MemoryGame() {
   const [isGameFinished, setIsGameFinished] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [showProjectList, setShowProjectList] = useState(false);
+
+  const [projects, setProjects] = useState(null);
+  const [isPending, setIsPending] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    setIsPending(true);
+    const unsub = projectFirestore.collection("projects").onSnapshot(
+      (snapshot) => {
+        if (snapshot.empty) {
+          setError("No projects to load");
+          setIsPending(false);
+        } else {
+          let results = [];
+          snapshot.docs.forEach((doc) => {
+            results.push({ id: doc.id, ...doc.data() });
+          });
+          setProjects(results);
+          setIsPending(false);
+        }
+      },
+      (err) => {
+        setError(err.message);
+        setIsPending(false);
+      }
+    );
+    return () => unsub();
+  }, []);
 
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
