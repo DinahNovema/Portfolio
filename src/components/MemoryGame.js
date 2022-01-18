@@ -7,7 +7,7 @@ import { projectFirestore } from "../firebase/config";
 import notes from "../images/notes.jpg";
 import saas from "../images/saas.jpg";
 import stocks from "../images/stocks.jpg";
-import portfolio from "../images/portfolio.jpg";
+import portfolio from "../images/portfolio.jpeg";
 
 //styles
 import "./MemoryGame.css";

@@ -56,9 +56,9 @@ export default function Projects() {
   return (
     <div className="projects">
       {!showGame && !showProjects && (
-        <h1 className={`question ${mode}`}>
+        <p className={`question ${mode}`}>
           Want to play a game to see my projects?{" "}
-        </h1>
+        </p>
       )}
       {!showGame && !showProjects && (
         <div className="btn-question-wrapper">

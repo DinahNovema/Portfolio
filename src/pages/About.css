@@ -2,13 +2,16 @@
 .title-about {
   color: rgb(71, 71, 71);
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 2.1em;
 }
 .about-me {
   color: rgb(71, 71, 71);
-  margin: 50px 0 0 10px;
+  text-align: center;
+  margin: 30px;
   padding: 10px;
-  font-size: 17px;
+  font-weight: 500;
 }
 .skills,
 .find-me,
@@ -22,9 +25,9 @@
 }
 .skills {
   color: rgb(71, 71, 71);
-  font-size: 20px;
   text-align: center;
   margin-top: 20px;
+  font-weight: 500;
 }
 @keyframes skills {
   from {
@@ -38,11 +41,14 @@
   text-align: center;
   color: rgb(71, 71, 71);
   font-size: 20px;
+  font-weight: 500;
+
   margin-top: 20px;
 }
 .social-media {
   display: flex;
   justify-content: center;
+
   margin: 30px 10px 180px 0;
 }
 .linkedin,
@@ -53,6 +59,11 @@
   text-decoration: none;
   margin: -20px 0 0 10px;
 }
+.linkedin:hover,
+.github-about:hover {
+  color: #d9a407;
+}
+
 .icons-skills {
   display: flex;
   justify-content: center;
@@ -75,15 +86,19 @@
 .icon.dark {
   color: rgb(245, 243, 243);
 }
-
+.linkedin.dark:hover,
+.github-about.dark:hover {
+  color: #d9a407;
+}
 /*Desktop styles*/
 @media only screen and (min-width: 480px) {
   .title-about {
-    margin-top: 100px;
+    margin-top: 80px;
   }
   .about-me {
-    margin: 80px;
-    font-size: 1.5em;
+    text-align: left;
+    font-size: 1.4em;
+    margin: 60px 0 110px 240px;
   }
   .skills {
     font-size: 1.5em;
@@ -107,6 +122,6 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-left: 180px;
+    margin-left: 160px;
   }
 }

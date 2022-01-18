@@ -17,10 +17,13 @@ export default function About() {
       </h1>
       <p className={`about-me ${mode}`}>
         After years of working in various fields, such as Innovation, Marketing
-        and recently in QA, I've decided to embrace the tech world, and learn
-        Frontend Development. I've recently completed the 3 months Frontend
-        Development program at ITC (Israel Tech Challenge) and I keep up with my
-        skills and projects with online courses (such as Udemy).
+        and recently in QA,
+        <br /> I've decided to embrace the tech world, and learn Frontend
+        Development. I've recently
+        <br /> completed the 3 months Frontend Development program at ITC
+        (Israel Tech Challenge)
+        <br /> and I keep up with my skills and projects with online courses
+        (such as Udemy).
         <br /> I like to keep my code organized, clean and easy to read. I'm
         detail oriented, quick and self learner. <br />
       </p>
