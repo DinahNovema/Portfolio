@@ -7,7 +7,7 @@
   color: #d9a407;
   margin: 100px 0 0 50px;
   font-size: 35px;
-  font-weight: 500;
+  font-weight: 600;
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: 0.15em;
@@ -25,7 +25,7 @@
   color: rgb(71, 71, 71);
   margin: 30px 0 0 60px;
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .profile-picture {
   margin: 60px 0 180px 50px;

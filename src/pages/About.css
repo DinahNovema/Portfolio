@@ -2,7 +2,7 @@
 .title-about {
   color: rgb(71, 71, 71);
   text-align: center;
-  margin-top: 40px;
+  margin: 40px;
   font-weight: 500;
   font-size: 2.1em;
 }
@@ -26,7 +26,7 @@
 .skills {
   color: rgb(71, 71, 71);
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
   font-weight: 500;
 }
 @keyframes skills {
@@ -42,13 +42,11 @@
   color: rgb(71, 71, 71);
   font-size: 20px;
   font-weight: 500;
-
-  margin-top: 20px;
+  margin-top: 5px;
 }
 .social-media {
   display: flex;
   justify-content: center;
-
   margin: 30px 10px 180px 0;
 }
 .linkedin,
@@ -63,19 +61,46 @@
 .github-about:hover {
   color: #d9a407;
 }
-
 .icons-skills {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .icon {
   width: 40px;
   height: 40px;
   margin: 20px;
 }
-
+.button-pdf {
+  position: relative;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0 0 120px;
+  padding: 8px;
+  font-family: "poppins";
+  font-size: 1.2em;
+  color: white;
+  background-color: rgb(71, 71, 71);
+  cursor: pointer;
+}
+/* .pdf {
+  margin: 5px 0 0 -150px;
+  width: fit-content;
+} */
+.button-close {
+  position: absolute;
+  border: none;
+  border-radius: 4px;
+  margin: -835px 0 0 710px;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  font-family: "poppins";
+  font-size: 1.2em;
+  color: white;
+  background-color: rgb(71, 71, 71);
+  cursor: pointer;
+}
 /*Dark mode*/
 .about-me.dark,
 .title-about.dark,
@@ -93,35 +118,62 @@
 /*Desktop styles*/
 @media only screen and (min-width: 480px) {
   .title-about {
-    margin-top: 80px;
+    text-align: left;
+    margin: 60px 0 0 240px;
   }
   .about-me {
     text-align: left;
     font-size: 1.4em;
-    margin: 60px 0 110px 240px;
+    margin: 40px 0 0 240px;
   }
   .skills {
     font-size: 1.5em;
     text-align: left;
-    margin-left: 90px;
-  }
-  .find-me {
-    text-align: right;
-    margin: -120px 180px 0 0;
-  }
-  .social-media {
-    display: flex;
-    justify-content: right;
-    margin: 30px 160px 0 0;
-  }
-  .linkedin,
-  .github-about {
-    margin-right: 20px;
+    margin: 75px 0 0 250px;
   }
   .icons-skills {
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-left: 160px;
+    margin: -15px 0 0 350px;
+  }
+  .social-media {
+    display: flex;
+    justify-content: right;
+    margin: 30px 150px 0 0;
+  }
+  .find-me {
+    text-align: right;
+    margin: -105px 250px 0 0;
+  }
+  .linkedin,
+  .github-about {
+    margin: -20px 110px 0 -100px;
+  }
+  .button-pdf {
+    position: relative;
+    border: none;
+    border-radius: 4px;
+    margin: 40px 0 0 250px;
+    padding: 8px;
+    font-family: "poppins";
+    font-size: 1.2em;
+    color: white;
+    background-color: rgb(71, 71, 71);
+    cursor: pointer;
+  }
+  .button-close {
+    position: absolute;
+    border: none;
+    border-radius: 4px;
+    margin: 42px 0 0 -32px;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    font-family: "poppins";
+    font-size: 1.2em;
+    color: white;
+    background-color: rgb(71, 71, 71);
+    cursor: pointer;
   }
 }
