@@ -71,8 +71,7 @@
   height: 40px;
   margin: 20px;
 }
-.button-pdf {
-  position: relative;
+.pdf {
   border: none;
   border-radius: 4px;
   margin: 5px 0 0 120px;
@@ -82,25 +81,9 @@
   color: white;
   background-color: rgb(71, 71, 71);
   cursor: pointer;
+  text-decoration: none;
 }
-/* .pdf {
-  margin: 5px 0 0 -150px;
-  width: fit-content;
-} */
-.button-close {
-  position: absolute;
-  border: none;
-  border-radius: 4px;
-  margin: -835px 0 0 710px;
-  width: 30px;
-  height: 30px;
-  padding: 2px;
-  font-family: "poppins";
-  font-size: 1.2em;
-  color: white;
-  background-color: rgb(71, 71, 71);
-  cursor: pointer;
-}
+
 /*Dark mode*/
 .about-me.dark,
 .title-about.dark,
@@ -124,7 +107,7 @@
   .about-me {
     text-align: left;
     font-size: 1.4em;
-    margin: 40px 0 0 240px;
+    margin: 40px 0 20px 240px;
   }
   .skills {
     font-size: 1.5em;
@@ -150,30 +133,7 @@
   .github-about {
     margin: -20px 110px 0 -100px;
   }
-  .button-pdf {
-    position: relative;
-    border: none;
-    border-radius: 4px;
-    margin: 40px 0 0 250px;
-    padding: 8px;
-    font-family: "poppins";
-    font-size: 1.2em;
-    color: white;
-    background-color: rgb(71, 71, 71);
-    cursor: pointer;
-  }
-  .button-close {
-    position: absolute;
-    border: none;
-    border-radius: 4px;
-    margin: 42px 0 0 -32px;
-    width: 30px;
-    height: 30px;
-    padding: 2px;
-    font-family: "poppins";
-    font-size: 1.2em;
-    color: white;
-    background-color: rgb(71, 71, 71);
-    cursor: pointer;
+  .pdf {
+    margin: 50px 0 0 250px;
   }
 }

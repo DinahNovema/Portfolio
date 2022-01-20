@@ -4,35 +4,13 @@ import { BsGithub } from "react-icons/bs";
 import { AiFillHtml5 } from "react-icons/ai";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaCss3Alt } from "react-icons/fa";
-import { Document, Page } from "react-pdf";
-import { useState } from "react";
-import { pdfjs } from "react-pdf";
-import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
-import Dinah from "../assets/Dinah.pdf";
+import PDF from "../assets/Dinah.pdf";
 
 //styles
 import "./About.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
-
 export default function About() {
   const { mode } = useTheme();
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const [showPDF, setShowPDF] = useState(false);
-  const [isCloseButton, setIsCloseButton] = useState(false);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
-
-  const handleClick = () => {
-    setShowPDF(true);
-  };
-  const handleClickClose = () => {
-    setIsCloseButton(true);
-    setShowPDF(false);
-  };
 
   return (
     <div>
@@ -51,24 +29,9 @@ export default function About() {
         <br /> I like to keep my code organized, clean and easy to read. I'm
         detail oriented, quick and self learner. <br />
       </p>
-
-      <button className="button-pdf" onClick={handleClick}>
+      <a href={PDF} target="_blank" className="pdf">
         Check my CV
-        {showPDF && (
-          <Document
-            className="pdf"
-            file={Dinah}
-            onLoadSuccess={onDocumentLoadSuccess}
-          >
-            <Page pageNumber={pageNumber}></Page>
-          </Document>
-        )}
-      </button>
-      {showPDF && (
-        <button className="button-close" onClick={handleClickClose}>
-          X
-        </button>
-      )}
+      </a>
       <h2 className={`skills ${mode}`}>
         Skills: HTML5, CSS3, JavaScript, ReactJS
       </h2>

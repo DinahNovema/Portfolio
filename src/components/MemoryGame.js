@@ -30,7 +30,6 @@ export default function MemoryGame() {
   const [isGameFinished, setIsGameFinished] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [showProjectList, setShowProjectList] = useState(false);
-
   const [projects, setProjects] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(false);
