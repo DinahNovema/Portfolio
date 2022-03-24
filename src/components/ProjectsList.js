@@ -1,6 +1,7 @@
 import { BsGithub } from "react-icons/bs";
 import { projectFirestore } from "../firebase/config";
 import { useEffect, useState } from "react";
+import { useTheme } from "../hooks/useTheme";
 
 //styles
 import "./ProjectsList.css";
@@ -9,6 +10,7 @@ export default function ProjectsList() {
   const [projects, setProjects] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(false);
+  const { mode } = useTheme();
 
   useEffect(() => {
     setIsPending(true);
@@ -37,8 +39,8 @@ export default function ProjectsList() {
   return (
     <div className="projects-list">
       {isPending && (
-        <div class="loadingio-spinner-bean-eater-xdgb8rfp6y">
-          <div class="ldio-nbh2upc6wh">
+        <div className="loadingio-spinner-bean-eater-xdgb8rfp6y">
+          <div className="ldio-nbh2upc6wh">
             Loading projects...
             <div>
               <div></div>
@@ -55,7 +57,7 @@ export default function ProjectsList() {
       )}
 
       {error && <div className="error">{error}</div>}
-
+      {projects && <div className={`my-projects ${mode}`}>My Projects</div>}
       {projects &&
         projects.map((project) => (
           <div key={project.id}>

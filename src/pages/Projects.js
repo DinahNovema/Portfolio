@@ -57,7 +57,7 @@ export default function Projects() {
     <div className="projects">
       {!showGame && !showProjects && (
         <p className={`question ${mode}`}>
-          Want to play a game to see my projects?{" "}
+          Want to play a game to see my projects?
         </p>
       )}
       {!showGame && !showProjects && (

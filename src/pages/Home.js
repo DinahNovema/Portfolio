@@ -27,7 +27,7 @@ export default function Home() {
       autoresize: true,
       brightness: {
         min: 50,
-        max: 80,
+        max: 85,
         decay: {
           min: 0.015,
           max: 0.03,
@@ -42,20 +42,17 @@ export default function Home() {
   });
 
   const style = {
-    top: 50,
+    position: "absolute",
+    top: 150,
     left: 0,
     width: "100%",
     height: "90%",
-    position: "fixed",
   };
 
   return (
     <div className={`home ${mode}`}>
-      <div style={style}>
-        <Fireworks options={options} style={style} />
-      </div>
+      <Fireworks options={options} style={style} />
       <h1 className={`name ${mode}`}>Hi, I am Dinah</h1>
-
       <h2 className={`description ${mode}`}>
         Industrial Engineer | Junior Frontend Developer
       </h2>

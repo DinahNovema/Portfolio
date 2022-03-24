@@ -1,6 +1,12 @@
 /*General and Mobile styles*/
+.my-projects {
+  color: rgb(22, 21, 21);
+  font-family: "poppins";
+  text-align: center;
+  font-size: 1.3em;
+}
 .projects-list {
-  margin: 30px 50px 280px 40px;
+  margin: 10px 50px 280px 40px;
   height: 100%;
   width: 45%;
 }
@@ -13,7 +19,7 @@
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  margin: 100px 0 -80px 0;
+  margin: 40px 0 -30px 20px;
 }
 .card-wrapper:hover {
   transform: rotate(3deg);
@@ -230,4 +236,8 @@
   .title {
     font-size: large;
   }
+}
+/*dark mode*/
+.my-projects.dark {
+  color: white;
 }
