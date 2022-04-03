@@ -1,4 +1,5 @@
 /*General and Mobile styles*/
+
 .title-about {
   color: rgb(71, 71, 71);
   text-align: center;
@@ -101,14 +102,14 @@
 /*Desktop styles*/
 @media only screen and (min-width: 480px) {
   .title-about {
-    text-align: left;
+    text-align: center;
     font-size: 2em;
-    margin: 60px 0 0 240px;
   }
   .about-me {
     text-align: left;
-    font-size: 1.4em;
-    margin: 40px 0 20px 240px;
+    font-size: 1.3em;
+    padding: 20px;
+    margin-left: 150px;
   }
   .skills {
     font-size: 1.5em;

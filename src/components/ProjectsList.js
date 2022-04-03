@@ -57,7 +57,6 @@ export default function ProjectsList() {
       )}
 
       {error && <div className="error">{error}</div>}
-      {projects && <div className={`my-projects ${mode}`}>My Projects</div>}
       {projects &&
         projects.map((project) => (
           <div key={project.id}>

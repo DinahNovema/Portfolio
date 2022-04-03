@@ -1,6 +1,5 @@
 /*General and Mobile styles*/
 .App {
-  /* width: 375px; */
   min-height: 100%;
   border: 0.1px solid;
   background-color: #eeebeb;
@@ -14,6 +13,6 @@
 /*Desktop styles*/
 @media only screen and (min-width: 480px) {
   .App {
-    width: 100%;
+    width: 100vw;
   }
 }

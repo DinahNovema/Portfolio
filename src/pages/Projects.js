@@ -5,7 +5,6 @@ import { projectFirestore } from "../firebase/config";
 import "./Projects.css";
 
 //components
-import MemoryGame from "../components/MemoryGame";
 import ProjectsList from "../components/ProjectsList";
 import { useTheme } from "../hooks/useTheme";
 
@@ -14,8 +13,6 @@ export default function Projects() {
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(false);
   const { mode } = useTheme();
-  const [showGame, setShowGame] = useState(false);
-  const [showProjects, setShowProjects] = useState(false);
 
   useEffect(() => {
     setIsPending(true);
@@ -41,37 +38,12 @@ export default function Projects() {
     return () => unsub();
   }, []);
 
-  const handleClickYes = (button) => {
-    if (button) {
-      setShowGame(true);
-    }
-  };
-
-  const handleClickNo = (button) => {
-    if (button) {
-      setShowProjects(true);
-    }
-  };
-
   return (
     <div className="projects">
-      {!showGame && !showProjects && (
-        <p className={`question ${mode}`}>
-          Want to play a game to see my projects?
-        </p>
+      {projects && (
+        <h1 className={`my-projects ${mode}`}>Some of my projects</h1>
       )}
-      {!showGame && !showProjects && (
-        <div className="btn-question-wrapper">
-          <button className="btn-yes" onClick={handleClickYes}>
-            Yes
-          </button>
-          <button className="btn-no" onClick={handleClickNo}>
-            No
-          </button>
-        </div>
-      )}
-      {showGame && <MemoryGame />}
-      {showProjects && <ProjectsList />}
+      <ProjectsList />
     </div>
   );
 }
