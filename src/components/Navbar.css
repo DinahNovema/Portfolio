@@ -58,6 +58,10 @@
   border: none;
 }
 
+.hamburger-menu.light {
+  background-color: rgb(221, 218, 220);
+}
+
 /*Desktop styles*/
 
 @media only screen and (min-width: 480px) {

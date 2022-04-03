@@ -1,20 +1,32 @@
+/*General Styles*/
 .theme-selector {
+  position: relative;
   display: flex;
   justify-content: end;
-}
-.mode-toggle {
-  margin: -90px 30px 0 0;
 }
 .mode-toggle img {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
-@media only screen and (min-width: 480px) {
-  .theme-selector {
-    max-width: 1600px;
-  }
+@media (min-width: 320px) {
   .mode-toggle {
-    margin: -35px 50px 0 0;
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+  }
+}
+@media (min-width: 481px) {
+  .mode-toggle {
+    position: absolute;
+    bottom: 5px;
+    right: 40px;
+  }
+}
+@media (min-width: 961px) {
+  .mode-toggle {
+    position: absolute;
+    bottom: 5px;
+    right: 40px;
   }
 }

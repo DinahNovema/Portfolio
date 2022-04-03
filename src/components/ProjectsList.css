@@ -7,7 +7,7 @@
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  margin: 30px;
+  margin: 15px;
 }
 .card-wrapper:hover {
   transform: rotate(3deg);
@@ -188,12 +188,16 @@
 .my-projects.dark {
   color: rgb(221, 218, 220);
 }
+.my-projects.light {
+  background-color: rgb(221, 218, 220);
+}
 
 @media (min-width: 320px) {
   .card-wrapper {
     position: relative;
     width: 250px;
     height: 220px;
+    margin: 20px auto;
   }
   .project-content {
     width: 230px;
@@ -236,24 +240,24 @@
   .projects-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
-    width: 90%;
-    margin: 20px;
+    margin: 20px 70px 0 110px;
   }
   .card-wrapper {
     position: relative;
-    width: 400px;
-    height: 340px;
+    width: 370px;
+    height: 240px;
   }
   .project-content {
-    width: 380px;
-    height: 150px;
+    width: 350px;
+    height: 100px;
   }
   .project-content p {
-    font-size: 16px;
-    padding: 5px;
+    font-size: 15px;
+    padding: 2px;
+    margin-bottom: 17px;
   }
   .title {
     font-size: large;
+    margin-top: 10px;
   }
 }

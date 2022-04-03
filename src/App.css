@@ -3,11 +3,14 @@ body {
   margin: 0;
 }
 .App {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
 /*Dark mode*/
 .App.dark {
   background-color: #333;
+}
+.App.light {
+  background-color: rgb(218, 214, 214);
 }
