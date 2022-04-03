@@ -54,15 +54,15 @@ export default function Home() {
       <Fireworks options={options} style={style} />
       <div className="wrapper">
         <h1 className={`name ${mode}`}>Hi, I am Dinah</h1>
-        <h2 className={`description ${mode}`}>
-          Industrial Engineer | Junior Frontend Developer
-        </h2>
-        <img
-          className="profile-picture"
-          src={profilePicture}
-          alt="Dinah Novema"
-        />
       </div>
+      <h2 className={`description ${mode}`}>
+        Industrial Engineer <br /> Junior Frontend Developer
+      </h2>
+      <img
+        className="profile-picture"
+        src={profilePicture}
+        alt="Dinah Novema"
+      />
     </div>
   );
 }

@@ -2,16 +2,8 @@
 
 /*base styles*/
 
-html,
-body,
-#root {
-  height: 100%;
-}
-
 body {
   font-family: "Poppins", sans-serif;
-  margin: 0;
-  color: #333;
 }
 h1,
 h2,
@@ -19,11 +11,6 @@ h3,
 p {
   margin: 0;
 }
-h3 {
-  color: white;
-  text-align: center;
-}
-
 .error {
   color: white;
   text-align: center;
