@@ -7,13 +7,23 @@ body {
   color: rgb(71, 71, 71);
   font-family: "poppins";
   text-align: center;
-  font-size: 1.5em;
+  margin-top: 30px;
+  font-weight: 500;
 }
 /*Desktop styles*/
 
-@media only screen and (min-width: 480px) {
+@media (min-width: 320px) {
   .my-projects {
-    text-align: center;
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 481px) {
+  .my-projects {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 641px) {
+  .my-projects {
     font-size: 30px;
   }
 }

@@ -13,7 +13,7 @@ export default function About() {
   const { mode } = useTheme();
 
   return (
-    <div>
+    <div className="about">
       <h1 className={`title-about ${mode}`}>
         Originally, Industrial Engineer - Freshly new Frontend Developer
       </h1>

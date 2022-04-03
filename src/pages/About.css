@@ -1,17 +1,11 @@
-/*General and Mobile styles*/
+/*General Styles*/
 
 .title-about {
   color: rgb(71, 71, 71);
-  text-align: center;
-  margin: 40px;
   font-weight: 500;
-  font-size: 1.6em;
 }
 .about-me {
   color: rgb(71, 71, 71);
-  text-align: center;
-  margin: 40px;
-  padding: 10px;
   font-weight: 500;
 }
 .skills,
@@ -26,9 +20,7 @@
 }
 .skills {
   color: rgb(71, 71, 71);
-  text-align: center;
-  margin-top: 80px;
-  font-weight: 500;
+  word-spacing: 0.1em;
 }
 @keyframes skills {
   from {
@@ -38,17 +30,18 @@
     opacity: 1;
   }
 }
+.icons-skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .find-me {
   text-align: center;
   color: rgb(71, 71, 71);
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 20px;
 }
 .social-media {
   display: flex;
   justify-content: center;
-  margin: 30px 10px 200px 0;
 }
 .linkedin,
 .github-about {
@@ -61,16 +54,6 @@
 .linkedin:hover,
 .github-about:hover {
   color: #d9a407;
-}
-.icons-skills {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.icon {
-  width: 40px;
-  height: 40px;
-  margin: 20px;
 }
 .pdf {
   border: none;
@@ -99,43 +82,107 @@
 .github-about.dark:hover {
   color: #d9a407;
 }
-/*Desktop styles*/
-@media only screen and (min-width: 480px) {
+
+@media (min-width: 320px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .title-about {
+    font-size: 1.6em;
     text-align: center;
-    font-size: 2em;
+    margin: 25px;
   }
   .about-me {
-    text-align: left;
-    font-size: 1.3em;
+    text-align: center;
     padding: 20px;
-    margin-left: 150px;
+  }
+  .pdf {
+    margin: 25px 80px;
+  }
+  .skills {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+  }
+  .find-me {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  .social-media {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 641px) {
+  .title-about {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .about-me {
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 961px) {
+  .title-about {
+    font-size: 1.7em;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .about-me {
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1281px) {
+  .title-about {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .about-me {
+    text-align: justify;
+    margin: 25px;
+    padding: 0 150px 0 200px;
+    font-size: 20px;
+  }
+  .pdf {
+    margin-right: 1020px;
   }
   .skills {
     font-size: 1.5em;
     text-align: left;
-    margin: 75px 0 0 250px;
+    margin-right: 620px;
   }
   .icons-skills {
     display: flex;
     justify-content: left;
     align-items: center;
-    margin: -15px 0 0 350px;
+    margin: 15px 600px 0 0;
+  }
+  .find-me {
+    text-align: right;
+    font-size: 1.5em;
+    margin: -120px 0 0 1020px;
   }
   .social-media {
     display: flex;
     justify-content: right;
-    margin: 30px 150px 0 0;
-  }
-  .find-me {
-    text-align: right;
-    margin: -105px 250px 0 0;
+    margin: 30px 0 0 1020px;
   }
   .linkedin,
   .github-about {
-    margin: -20px 110px 0 -100px;
-  }
-  .pdf {
-    margin: 50px 0 0 250px;
+    padding: 5px;
   }
 }

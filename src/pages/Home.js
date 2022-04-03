@@ -56,7 +56,8 @@ export default function Home() {
         <h1 className={`name ${mode}`}>Hi, I am Dinah</h1>
       </div>
       <h2 className={`description ${mode}`}>
-        Industrial Engineer <br /> Junior Frontend Developer
+        Industrial Engineer <hr className="horizontal-line" /> Junior Frontend
+        Developer
       </h2>
       <img
         className="profile-picture"
