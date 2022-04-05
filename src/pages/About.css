@@ -97,7 +97,8 @@
   }
   .about-me {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
+    font-size: 18px;
   }
   .pdf {
     margin: 25px 80px;
@@ -106,6 +107,7 @@
     text-align: center;
     margin-top: 20px;
     font-weight: 500;
+    padding: 10px;
   }
   .icon {
     width: 40px;
