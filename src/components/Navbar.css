@@ -1,11 +1,10 @@
 /*General and Mobile styles*/
-
 .hamburger-menu {
   display: flex;
   position: absolute;
   top: 30px;
-  left: 8px;
-  z-index: 3;
+  left: 20px;
+  border: none;
 }
 .hamburger-menu:hover {
   cursor: pointer;
@@ -15,30 +14,21 @@
 }
 #hidden {
   position: absolute;
-  z-index: 2;
-  top: 30px;
-  right: -25px;
+  left: 60px;
+  top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-size: 1em;
-  width: 100vw;
-  height: 100vh;
-  padding-left: 40px;
-  background-color: #272724;
 }
 .navbar {
   display: flex;
   height: 110px;
   font-size: 1.4em;
   padding: 5px;
-  overflow: hidden;
 }
 .navbar a {
   color: rgb(71, 71, 71);
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: -95px;
+  padding: 3px 10px;
   text-decoration: none;
 }
 .navbar a:hover {
@@ -65,10 +55,6 @@
 .hamburger-menu.dark {
   background-color: #333333;
   border: none;
-}
-
-.hamburger-menu.light {
-  background-color: rgb(221, 218, 220);
 }
 
 /*Desktop styles*/

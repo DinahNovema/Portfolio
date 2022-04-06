@@ -8,6 +8,7 @@
   justify-content: center;
   overflow: hidden;
   margin: 15px;
+  z-index: 1;
 }
 .images {
   z-index: 1;
